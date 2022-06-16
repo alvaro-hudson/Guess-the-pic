@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Alvaro() {
+function Pixel() {
+  const clickHandler = evt => {
+    setStyle({
+      height: '10vh',
+      width: '5vw',
+      opacity: 1.2
+    })
+  }
+
+  const [style, setStyle] = useState({
+    height: '10vh',
+    width: '5vw',
+    backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+  })
+
   return (
-    <h1>Alvaro's page! Wooo!</h1>
+    <div style={style}
+      onClick={() => clickHandler()}>
+    </div>
   )
 }
 
-export default Alvaro
+export default function Alvaro() {
+  return (
+    <div className='alvaro-container'>
+      {Array.from({ length: 200 }, () => <Pixel />)}
+    </div>
+  )
+}

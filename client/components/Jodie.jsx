@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Jodie() {
+function Pixel() {
+  const clickHandler = evt => {
+    setStyle({
+      height: '10vh',
+      width: '5vw',
+      opacity: 1.2
+    })
+  }
+
+  const [style, setStyle] = useState({
+    height: '10vh',
+    width: '5vw',
+    backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+  })
+
   return (
-    <h1>Jodie's page! Wooo!</h1>
+    <div style={style}
+      onClick={() => clickHandler()}>
+    </div>
   )
 }
 
-export default Jodie
+export default function Jodie() {
+  return (
+    <div className='jodie-container'>
+      {Array.from({ length: 200 }, () => <Pixel />)}
+    </div>
+  )
+}
