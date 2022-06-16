@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Jared() {
+function Pixel() {
+  const clickHandler = evt => {
+    setStyle({
+      height: '20px',
+      width: '20px',
+      backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+    })
+  }
+
+  const [style, setStyle] = useState({
+    height: '20px',
+    width: '20px',
+    backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+  })
+
   return (
-    <h1>Jared's page! Wooo!</h1>
+    <div style={style}
+      onClick={() => clickHandler()}>
+    </div>
+
   )
 }
 
-export default Jared
+export default function Jared() { 
+  return (
+    Array.from({ length: 50 }, () => <Pixel />)
+  )
+}
