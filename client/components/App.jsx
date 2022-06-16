@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import Jodie from './Jodie'
+import Jared from './Jared'
+import Alvaro from './Alvaro'
 
 const App = () => {
   const [count, setCount] = useState(0)
