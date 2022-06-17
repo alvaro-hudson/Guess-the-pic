@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 
 function Pixel() {
-  const clickHandler = () => {
+  const mouseHandler = () => {
     setDiv(false)
   }
 
@@ -18,7 +18,7 @@ function Pixel() {
     <>
     {normalDiv ? ( 
     <div style={style} 
-        onClick={() => clickHandler()}
+        onMouseOver={() => mouseHandler()}
       />
       ) :( 
       <motion.div style={style}
@@ -28,7 +28,7 @@ function Pixel() {
         borderRadius: ["20%", "20%", "50%", "50%", "20%"],
         opacity: [1,1,1,1,0]
       }}
-        onClick={() => clickHandler()}
+        onMouseOver={() => mouseHandler()}
       />
     )}
       
