@@ -5,7 +5,7 @@ function Pixel() {
     setStyle({
       height: '10vh',
       width: '5vw',
-      opacity: 1.2
+      opacity: 1.2,
     })
   }
 
@@ -16,10 +16,10 @@ function Pixel() {
   })
 
   return (
-    <div style={style}
-      onDragEnter={() => dragHandler()}
-      draggable= {true}>
-    </div>
+      <div style={style}
+        onDragEnter={() => dragHandler()}
+        draggable={true}>
+      </div>
   )
 }
 
