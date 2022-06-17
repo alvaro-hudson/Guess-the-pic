@@ -2,6 +2,7 @@ html, body, .viewport {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-family: 'Luckiest Guy', cursive;
 }
 
 #app {
@@ -11,6 +12,10 @@ html, body, .viewport {
 div {
   display: flex;
   flex-wrap: wrap;
+}
+
+p {
+  font-weight: bold;
 }
 
 .jared-container {
@@ -25,7 +30,7 @@ div {
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-image: url(baldbowler.jpg);
 }
 
@@ -46,4 +51,27 @@ div {
 
 .alvaro-image3 {
   background-image: url(./lion_king.jpg);
+}
+
+
+.rick-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(rickkkkkkkk.jpg);
+}
+
+.rick-title {
+  animation: ricktitle 5s infinite;
+}
+
+@keyframes ricktitle {
+  50% {
+      font-size: 80px;
+    }
 }
