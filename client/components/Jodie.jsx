@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { animations } from 'react-animation'
 
 function Pixel() {
-  const clickHandler = evt => {
+  const dragHandler = evt => {
     setStyle({
       height: '10vh',
       width: '5vw',
@@ -17,7 +18,8 @@ function Pixel() {
 
   return (
     <div style={style}
-      onClick={() => clickHandler()}>
+      onDragEnter={() => dragHandler()}
+      draggable= {true}>
     </div>
   )
 }
