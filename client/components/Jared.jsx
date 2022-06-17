@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function Pixel() {
-  const clickHandler = evt => {
+  const clickHandler = (evt) => {
     setStyle({
       height: '10vh',
       width: '5vw',
