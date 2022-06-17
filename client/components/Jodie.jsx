@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { animations } from 'react-animation'
 
 function Pixel() {
   const dragHandler = evt => {
