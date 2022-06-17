@@ -4,8 +4,7 @@ import useSound from 'use-sound'
 
 import scream from '../../server/public/Humi1013.mp3'
 
-function Pixel() {
-
+function Pixel(props) {
   const [play] = useSound(scream)
   
   const MouseOver = () => {
@@ -17,8 +16,6 @@ function Pixel() {
     })
   }
 
-  
-
   const [style, setStyle] = useState({
     height: '10vh',
     width: '5vw',
@@ -28,16 +25,33 @@ function Pixel() {
   return (
 
     <div style={style}
-      onMouseOver={() => MouseOver()}>
+      onMouseOver={() => MouseOver()}
+      onClick={props.onClick}>
     </div>
   )
 }
 
 export default function Alvaro() {
-  return (
+  const [bgNumber, setBgNumber] = useState(0)
+  const backgroundClasses = [
+    'alvaro-image',
+    'alvaro-image2',
+    'alvaro-image3',
+    'd',
+    'e'
 
-    <div className='alvaro-container'>
-      {Array.from({ length: 200 }, () => <Pixel />)}
+  ]
+
+  function cycleBackground() {
+    let nextIndex = (bgNumber + 1) % backgroundClasses.length
+    setBgNumber(nextIndex)
+  }
+
+  const bgClass = backgroundClasses[bgNumber]
+
+  return (  
+    <div className={`alvaro-container ${bgClass}`}>
+      {Array.from({ length: 200 }, () => <Pixel onClick={cycleBackground}/>)}
     </div>
   )
 }
