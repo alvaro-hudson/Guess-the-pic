@@ -7,7 +7,6 @@ import Home from './Home'
 import Mystery from './Mystery'
 
 const App = () => {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
