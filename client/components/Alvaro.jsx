@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 
+import useSound from 'use-sound'
+
+import scream from '../../server/public/Humi1013.mp3'
+
 function Pixel() {
+
+  const [play] = useSound(scream)
   
   const MouseOver = () => {
+    play()
     setStyle({
       height: '10vh',
       width: '5vw',
@@ -19,6 +26,7 @@ function Pixel() {
   })
 
   return (
+
     <div style={style}
       onMouseOver={() => MouseOver()}>
     </div>
@@ -27,6 +35,7 @@ function Pixel() {
 
 export default function Alvaro() {
   return (
+
     <div className='alvaro-container'>
       {Array.from({ length: 200 }, () => <Pixel />)}
     </div>
