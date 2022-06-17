@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 
 function Pixel() {
-  const clickHandler = evt => {
+  
+  const MouseOver = () => {
     setStyle({
       height: '10vh',
       width: '5vw',
       opacity: 1.2
     })
   }
+
+  
 
   const [style, setStyle] = useState({
     height: '10vh',
@@ -17,7 +20,7 @@ function Pixel() {
 
   return (
     <div style={style}
-      onClick={() => clickHandler()}>
+      onMouseOver={() => MouseOver()}>
     </div>
   )
 }
