@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function Pixel() {
-  const clickHandler = (evt) => {
+  const clickHandler = () => {
     setStyle({
       height: '10vh',
       width: '5vw',
@@ -16,9 +16,11 @@ function Pixel() {
   })
 
   return (
+    <>
       <div style={style}
         onClick={() => clickHandler()}>
       </div>
+      </>
   )
 }
 
