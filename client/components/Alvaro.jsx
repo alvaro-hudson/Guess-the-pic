@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import useSound from 'use-sound'
 
 import scream from '../../server/public/Humi1013.mp3'
+import lemonGrab from '../../server/public/lemon-grab-unacceptable.mp3'
 
 function Pixel(props) {
   const [play] = useSound(scream)
@@ -32,17 +33,19 @@ function Pixel(props) {
 }
 
 export default function Alvaro() {
+
+  const [play] = useSound(lemonGrab)
   const [bgNumber, setBgNumber] = useState(0)
   const backgroundClasses = [
     'alvaro-image',
     'alvaro-image2',
     'alvaro-image3',
-    'd',
-    'e'
+    'alvaro-image4',
 
   ]
 
   function cycleBackground() {
+    play()
     let nextIndex = (bgNumber + 1) % backgroundClasses.length
     setBgNumber(nextIndex)
   }
