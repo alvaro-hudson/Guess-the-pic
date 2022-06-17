@@ -39,8 +39,20 @@ p {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.alvaro-image {
   background-image: url(./BieberImage.jpeg);
 }
+
+.alvaro-image2 {
+  background-image: url(./rick-and-morty-image.jpg);
+}
+
+.alvaro-image3 {
+  background-image: url(./lion_king.jpg);
+}
+
 
 .rick-container {
   display: flex;
