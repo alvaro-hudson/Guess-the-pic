@@ -1,3 +1,14 @@
+# Guess The Pic
+
+We have each created our own page where you need to either move the mouse, or drag the mouse, to reveal what the picture below is. On Alvaro's page you can even click to find more pics! There is even a Mystery page you can check out.
+
+Have some fun!
+
+
+
+-------------------------------------------------------------------------------------------
+
+
 # A starter webpack project for React
 
 This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
